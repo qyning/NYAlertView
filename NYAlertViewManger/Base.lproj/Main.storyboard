@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NYAlertViewManger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TSO-k3-K7P">
+                                <rect key="frame" x="0.0" y="20" width="375" height="323.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSG-Tm-90n">
+                                        <rect key="frame" x="112.5" y="140" width="150" height="44"/>
+                                        <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="JdJ-rw-4US"/>
+                                            <constraint firstAttribute="width" constant="150" id="LSe-MO-osX"/>
+                                        </constraints>
+                                        <state key="normal" title="自动队列弹窗">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="autoAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ijY-wy-JPg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.77265082470000002" green="0.64512803819999998" blue="0.74085828990000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pSG-Tm-90n" firstAttribute="centerY" secondItem="TSO-k3-K7P" secondAttribute="centerY" id="9f4-f6-3mj"/>
+                                    <constraint firstItem="pSG-Tm-90n" firstAttribute="centerX" secondItem="TSO-k3-K7P" secondAttribute="centerX" id="shN-XE-vyM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZe-LO-bbB">
+                                <rect key="frame" x="0.0" y="343" width="375" height="323.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miL-6R-z55">
+                                        <rect key="frame" x="112.5" y="190" width="150" height="44"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="6cg-JL-3Ao"/>
+                                            <constraint firstAttribute="width" constant="150" id="o2c-jj-t5H"/>
+                                        </constraints>
+                                        <state key="normal" title="NEXT">
+                                            <color key="titleColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="elr-Xm-5e3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Wn-Ue-Qwp">
+                                        <rect key="frame" x="112" y="90" width="150" height="44"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="1Sr-DQ-NX9"/>
+                                            <constraint firstAttribute="height" constant="44" id="cgB-Ra-6hr"/>
+                                        </constraints>
+                                        <state key="normal" title="停止后续弹窗模式">
+                                            <color key="titleColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopNextAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O5U-e6-sal"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.59215686270000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2Wn-Ue-Qwp" firstAttribute="centerX" secondItem="TZe-LO-bbB" secondAttribute="centerX" id="ODA-ob-aWX"/>
+                                    <constraint firstItem="miL-6R-z55" firstAttribute="centerX" secondItem="TZe-LO-bbB" secondAttribute="centerX" id="Onx-qF-npT"/>
+                                    <constraint firstItem="2Wn-Ue-Qwp" firstAttribute="centerY" secondItem="TZe-LO-bbB" secondAttribute="centerY" constant="-50" id="bEe-D2-V1p"/>
+                                    <constraint firstItem="miL-6R-z55" firstAttribute="centerY" secondItem="TZe-LO-bbB" secondAttribute="centerY" constant="50" id="dWG-kz-Zdl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TZe-LO-bbB" secondAttribute="trailing" id="ATE-ch-6uh"/>
+                            <constraint firstItem="TZe-LO-bbB" firstAttribute="top" secondItem="TSO-k3-K7P" secondAttribute="bottom" id="Bmu-hd-8wl"/>
+                            <constraint firstItem="TZe-LO-bbB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GPR-NM-19a"/>
+                            <constraint firstAttribute="trailing" secondItem="TSO-k3-K7P" secondAttribute="trailing" id="SSI-1m-onp"/>
+                            <constraint firstItem="TZe-LO-bbB" firstAttribute="height" secondItem="TSO-k3-K7P" secondAttribute="height" id="eX5-p3-0Yc"/>
+                            <constraint firstItem="TSO-k3-K7P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gSc-1m-DKC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TZe-LO-bbB" secondAttribute="bottom" id="n6m-uf-OjD"/>
+                            <constraint firstItem="TSO-k3-K7P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nmA-8c-nty"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
         </scene>
     </scenes>
 </document>

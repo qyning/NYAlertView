@@ -12,6 +12,7 @@
 		FF2ADF8A1EA1DA8E00601E4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2ADF881EA1DA8E00601E4F /* Main.storyboard */; };
 		FF2ADF8C1EA1DA8E00601E4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2ADF8B1EA1DA8E00601E4F /* Assets.xcassets */; };
 		FF2ADF8F1EA1DA8E00601E4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2ADF8D1EA1DA8E00601E4F /* LaunchScreen.storyboard */; };
+		FF2ADF981EA1DAB700601E4F /* NYAlertViewManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2ADF971EA1DAB700601E4F /* NYAlertViewManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FF2ADF8B1EA1DA8E00601E4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF2ADF8E1EA1DA8E00601E4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF2ADF901EA1DA8E00601E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF2ADF971EA1DAB700601E4F /* NYAlertViewManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYAlertViewManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +56,21 @@
 		FF2ADF831EA1DA8E00601E4F /* NYAlertViewManger */ = {
 			isa = PBXGroup;
 			children = (
+				FF2ADF961EA1DAAC00601E4F /* NYAlertViewManger */,
 				FF2ADF841EA1DA8E00601E4F /* AppDelegate.swift */,
 				FF2ADF861EA1DA8E00601E4F /* ViewController.swift */,
 				FF2ADF881EA1DA8E00601E4F /* Main.storyboard */,
 				FF2ADF8B1EA1DA8E00601E4F /* Assets.xcassets */,
 				FF2ADF8D1EA1DA8E00601E4F /* LaunchScreen.storyboard */,
 				FF2ADF901EA1DA8E00601E4F /* Info.plist */,
+			);
+			path = NYAlertViewManger;
+			sourceTree = "<group>";
+		};
+		FF2ADF961EA1DAAC00601E4F /* NYAlertViewManger */ = {
+			isa = PBXGroup;
+			children = (
+				FF2ADF971EA1DAB700601E4F /* NYAlertViewManger.swift */,
 			);
 			path = NYAlertViewManger;
 			sourceTree = "<group>";
@@ -136,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF2ADF981EA1DAB700601E4F /* NYAlertViewManger.swift in Sources */,
 				FF2ADF871EA1DA8E00601E4F /* ViewController.swift in Sources */,
 				FF2ADF851EA1DA8E00601E4F /* AppDelegate.swift in Sources */,
 			);
